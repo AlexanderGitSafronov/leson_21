@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        const drawCircle = (x, y, radius, isFilled = true) => {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = '#99CCFF';
+            isFilled ? ctx.fill() : ctx.stroke();
+        }
+        const drawCircleStyle = (x, y, radius, isFilled = true) => {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, Math.PI * 2);
+            ctx.fillStyle = '#000000';
+            isFilled ? ctx.fill() : ctx.stroke();
+        }
+        drawCircle(300, 300, 80);
+        drawCircle(300, 200, 60);
+        drawCircle(300, 120, 40);
+        drawCircle(250, 350, 30);
+        drawCircle(350, 350, 30);
+        drawCircleStyle(300, 240, 10);
+        drawCircleStyle(300, 190, 10);
+        drawCircleStyle(300, 300, 10);
+        drawCircleStyle(280, 110, 5);
+        drawCircleStyle(320, 110, 5);
+        drawCircleStyle(320, 110, 5);
+    
+
+        ctx.beginPath();
+        ctx.arc(300, 125, 15, 0, Math.PI);
+        ctx.lineWidth = 4;
+        ctx.stroke();
+
+        ctx.strokeStyle = '#663300';
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.moveTo(170, 130);
+        ctx.lineTo(260, 190);
+        ctx.stroke();
+
+        ctx.lineWidth = 10;
+        ctx.beginPath();
+        ctx.moveTo(340, 190);
+        ctx.lineTo(440, 130);
+        ctx.stroke();
+        
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.moveTo(140, 140);
+        ctx.lineTo(170, 130);
+        ctx.stroke();
+        
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.moveTo(140, 110);
+        ctx.lineTo(170, 130);
+        ctx.stroke();
+
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.moveTo(150, 90);
+        ctx.lineTo(175, 130);
+        ctx.stroke();
+
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.moveTo(435, 130);
+        ctx.lineTo(470, 150);
+        ctx.stroke();
+
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.moveTo(435, 132);
+        ctx.lineTo(470, 120);
+        ctx.stroke();
+
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.moveTo(435, 132);
+        ctx.lineTo(470, 93);
+        ctx.stroke();
+
+        const x = 250;
+        const y = 90;
+        const bucketHeight = 100;
+        const d = -180;
+        const bucketWidth = 120;
+        
+        ctx.fillStyle = '#999999';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + bucketHeight, y);
+        ctx.lineTo(290, -100);
+        ctx.lineTo(250, 90);
+        ctx.fill();
+
+    
+        ctx.strokeStyle = '#FF3300';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(300, 120);
+        ctx.lineTo(345, 130);
+        ctx.stroke();
+        
+        ctx.strokeStyle = '#FF3300';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(300, 125);
+        ctx.lineTo(345, 130);
+        ctx.stroke();
+
+    </script>
+</body>
+</html>
